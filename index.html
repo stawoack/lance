@@ -549,6 +549,99 @@ body{
   }
 }
 
+
+/* =========================================================
+   SW FREELANCE V4
+   MOBILE FOOTER: 3 COLUMNS ON ONE ROW
+   MOBILE SIDEBAR: OPENS FROM LEFT
+   ========================================================= */
+
+/* ---------- LEFT MOBILE DRAWER ---------- */
+@media (max-width:820px){
+  .drawer{
+    left:0 !important;
+    right:auto !important;
+    transform:translateX(-105%) !important;
+    border-left:0 !important;
+    border-right:1px solid var(--line2) !important;
+    border-radius:0 24px 24px 0 !important;
+  }
+
+  .drawer.open{
+    transform:translateX(0) !important;
+  }
+
+  /* Keep the drawer overlay covering the page correctly. */
+  .scrim{
+    z-index:90 !important;
+  }
+  .drawer{
+    z-index:100 !important;
+  }
+
+  /* ---------- FOOTER: ABOUT FULL WIDTH, THEN
+     MARKETPLACE + COMPANY + ACCOUNT TOGETHER ---------- */
+  .footer-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    grid-template-areas:
+      "brand brand brand"
+      "market company account" !important;
+    column-gap:12px !important;
+    row-gap:22px !important;
+  }
+
+  .footer-brand{
+    grid-area:brand !important;
+    grid-column:auto !important;
+    width:100% !important;
+  }
+
+  /* Existing footer columns are in DOM order:
+     Marketplace, Company, Account. */
+  .footer-col:nth-of-type(1){
+    grid-area:market !important;
+  }
+  .footer-col:nth-of-type(2){
+    grid-area:company !important;
+  }
+  .footer-col:nth-of-type(3){
+    grid-area:account !important;
+  }
+
+  .footer-col{
+    min-width:0 !important;
+    width:100% !important;
+  }
+
+  .footer-col h4{
+    font-size:8.5px !important;
+    letter-spacing:.12em !important;
+    white-space:nowrap !important;
+  }
+
+  .footer-col a{
+    font-size:9.5px !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+    margin-bottom:8px !important;
+  }
+}
+
+@media (max-width:420px){
+  .footer-grid{
+    column-gap:9px !important;
+  }
+
+  .footer-col h4{
+    font-size:8px !important;
+  }
+
+  .footer-col a{
+    font-size:9px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -556,7 +649,7 @@ body{
 <svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs>
 <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="moon" viewBox="0 0 24 24"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/></symbol><symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol><symbol id="chev" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol><symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 21v-7h6v7"/></symbol><symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol><symbol id="brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></symbol><symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol><symbol id="users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M16 3a4 4 0 0 1 0 8M21 21v-2a4 4 0 0 0-3-3.9"/></symbol><symbol id="code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></symbol><symbol id="palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18h1.5a2 2 0 0 0 0-4H12a2 2 0 0 1 0-4h3a6 6 0 0 0 0-10Z"/></symbol><symbol id="megaphone" viewBox="0 0 24 24"><path d="m3 11 14-5v12L3 14v-3Z"/><path d="M17 10a4 4 0 0 1 0 4M7 15l1 5"/></symbol><symbol id="pen" viewBox="0 0 24 24"><path d="m4 20 4.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11Z"/><path d="m14 6 4 4"/></symbol><symbol id="video" viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 10 5-3v10l-5-3"/></symbol><symbol id="chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-6"/></symbol><symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6Z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="zap" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 9-12h-7Z"/></symbol><symbol id="star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></symbol><symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol><symbol id="map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.3 1.8c-.9.8-1.8 1.2-1.8 2.7M12 17h.01"/></symbol><symbol id="login" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5M15 12H3M21 19V5a2 2 0 0 0-2-2h-7"/></symbol><symbol id="plususer" viewBox="0 0 24 24"><path d="M15 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M19 8v6M16 11h6"/></symbol><symbol id="wallet" viewBox="0 0 24 24"><path d="M4 6h15a2 2 0 0 1 2 2v11H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h13"/><path d="M16 14h5"/></symbol><symbol id="book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v17H6a2 2 0 0 0-2 2Z"/><path d="M4 5v15M8 7h7M8 11h7"/></symbol><symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol><symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 8.6c0 5.5-8.8 11-8.8 11S3.2 14.1 3.2 8.6A4.6 4.6 0 0 1 12 6.3a4.6 4.6 0 0 1 8.8 2.3Z"/></symbol><symbol id="filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
 </defs></svg>
-<header><div class="container nav"><a class="brand" href="#home" data-route="home"><b class="mark">SW</b><span class="brand-name">Freelance <span>Hub</span></span></a><nav class="desktop-nav"><button class="mega-trigger" id="megaBtn">Discover <svg class="icon sm"><use href="#chev"/></svg></button><a class="nav-link" href="#work" data-route="work">Find Work</a><a class="nav-link" href="#services" data-route="services">Services</a><a class="nav-link" href="#pricing" data-route="pricing">Pricing</a><a class="nav-link" href="#about" data-route="about">About</a></nav><div class="actions"><button class="icon-btn" id="searchBtn" aria-label="Search"><svg class="icon"><use href="#search"/></svg></button><button class="icon-btn" id="themeBtn" aria-label="Theme"><svg class="icon"><use id="themeIcon" href="#sun"/></svg></button><a class="btn secondary" href="#signin" data-route="signin">Sign in</a><a class="btn primary" href="#signup" data-route="signup">Join free</a></div><div class="mobile-actions"><button class="icon-btn" id="mobileSearch" aria-label="Search"><svg class="icon"><use href="#search"/></svg></button><button class="icon-btn" id="mobileMenu" aria-label="Menu"><svg class="icon"><use href="#menu"/></svg></button></div></div></header>
+<header><div class="container nav"><a class="brand" href="#home" data-route="home"><b class="mark">SW</b><span class="brand-name">Freelance <span>Hub</span></span></a><nav class="desktop-nav"><button class="mega-trigger" id="megaBtn">Discover <svg class="icon sm"><use href="#chev"/></svg></button><a class="nav-link" href="#work" data-route="work">Find Work</a><a class="nav-link" href="#services" data-route="services">Services</a><a class="nav-link" href="#pricing" data-route="pricing">Pricing</a><a class="nav-link" href="#about" data-route="about">About</a></nav><div class="actions"><button class="icon-btn" id="searchBtn" aria-label="Search"><svg class="icon"><use href="#search"/></svg></button><button class="icon-btn" id="themeBtn" aria-label="Theme"><svg class="icon"><use id="themeIcon" href="#sun"/></svg></button><a class="btn secondary" href="#signin" data-route="signin">Sign in</a><a class="btn primary" href="#signup" data-route="signup">Join free</a></div><div class="mobile-actions"><button class="icon-btn" id="mobileSearch" aria-label="Search"><svg class="icon"><use href="#search"/></svg></button><button class="icon-btn" id="mobileMenu" aria-label="Open menu from left"><svg class="icon"><use href="#menu"/></svg></button></div></div></header>
 <div class="mega" id="mega"><div class="mega-grid"><div class="mega-col"><div class="mega-title">Explore</div><a class="mega-item" href="#services" data-route="services"><i class="mega-icon"><svg class="icon"><use href="#grid"/></svg></i><span class="mega-copy"><strong>Categories</strong><span>Explore every skill</span></span></a><a class="mega-item" href="#work" data-route="work"><i class="mega-icon"><svg class="icon"><use href="#brief"/></svg></i><span class="mega-copy"><strong>Find talent</strong><span>Browse professionals</span></span></a><a class="mega-item" href="#portfolio" data-route="portfolio"><i class="mega-icon"><svg class="icon"><use href="#star"/></svg></i><span class="mega-copy"><strong>Portfolios</strong><span>See real work</span></span></a></div><div class="mega-col"><div class="mega-title">Trending</div><a class="mega-item" href="#services" data-route="services"><i class="mega-icon"><svg class="icon"><use href="#code"/></svg></i><span class="mega-copy"><strong>Web Development</strong><span>Websites & apps</span></span></a><a class="mega-item" href="#services" data-route="services"><i class="mega-icon"><svg class="icon"><use href="#palette"/></svg></i><span class="mega-copy"><strong>Design</strong><span>UI, UX & branding</span></span></a><a class="mega-item" href="#services" data-route="services"><i class="mega-icon"><svg class="icon"><use href="#megaphone"/></svg></i><span class="mega-copy"><strong>Marketing</strong><span>Growth & campaigns</span></span></a></div><div class="mega-col"><div class="mega-title">Business</div><a class="mega-item" href="#pricing" data-route="pricing"><i class="mega-icon"><svg class="icon"><use href="#wallet"/></svg></i><span class="mega-copy"><strong>Plans & Pricing</strong><span>Flexible options</span></span></a><a class="mega-item" href="#how" data-route="how"><i class="mega-icon"><svg class="icon"><use href="#zap"/></svg></i><span class="mega-copy"><strong>How it works</strong><span>Simple project flow</span></span></a><a class="mega-item" href="#contact" data-route="contact"><i class="mega-icon"><svg class="icon"><use href="#help"/></svg></i><span class="mega-copy"><strong>Talk to SW</strong><span>Get project help</span></span></a></div><div class="mega-col"><div class="mega-title">Professionals</div><a class="mega-item" href="#signup" data-route="signup"><i class="mega-icon"><svg class="icon"><use href="#plususer"/></svg></i><span class="mega-copy"><strong>Join as freelancer</strong><span>Create your profile</span></span></a><a class="mega-item" href="#work" data-route="work"><i class="mega-icon"><svg class="icon"><use href="#brief"/></svg></i><span class="mega-copy"><strong>Browse opportunities</strong><span>Find your next project</span></span></a><a class="mega-item" href="#about" data-route="about"><i class="mega-icon"><svg class="icon"><use href="#shield"/></svg></i><span class="mega-copy"><strong>Safe workspace</strong><span>Built for trust</span></span></a></div></div><div class="mega-foot"><span>Independent work, organized into one calm workspace.</span><a class="btn primary" href="#signup" data-route="signup">Create free account <svg class="icon sm"><use href="#arrow"/></svg></a></div></div>
 <div class="mobile-overlay" id="mobileOverlay"></div><aside class="drawer" id="drawer"><div class="drawer-top"><a class="brand" href="#home" data-route="home"><b class="mark">SW</b><span class="brand-name">Freelance <span>Hub</span></span></a><div class="drawer-controls"><button id="drawerSearch" aria-label="Search"><svg class="icon"><use href="#search"/></svg></button><button id="drawerTheme" aria-label="Theme"><svg class="icon"><use id="drawerThemeIcon" href="#sun"/></svg></button><button id="drawerClose" aria-label="Close"><svg class="icon"><use href="#x"/></svg></button></div></div><div class="drawer-section"><div class="drawer-title">Main</div><a class="drawer-link" href="#home" data-route="home"><svg class="icon sm"><use href="#home"/></svg>Home</a><a class="drawer-link" href="#work" data-route="work"><svg class="icon sm"><use href="#brief"/></svg>Find Work</a><a class="drawer-link" href="#services" data-route="services"><svg class="icon sm"><use href="#grid"/></svg>Services</a><a class="drawer-link" href="#pricing" data-route="pricing"><svg class="icon sm"><use href="#wallet"/></svg>Pricing</a><a class="drawer-link" href="#about" data-route="about"><svg class="icon sm"><use href="#user"/></svg>About</a></div><div class="drawer-section"><div class="drawer-title">Mega Menu</div><a class="drawer-link" href="#services" data-route="services"><svg class="icon sm"><use href="#code"/></svg>Development</a><div class="drawer-sub"><a href="#services" data-route="services">Websites</a><a href="#services" data-route="services">Apps</a><a href="#services" data-route="services">E-commerce</a><a href="#services" data-route="services">Automation</a></div><a class="drawer-link" href="#services" data-route="services"><svg class="icon sm"><use href="#palette"/></svg>Design</a><div class="drawer-sub"><a href="#services" data-route="services">UI / UX</a><a href="#services" data-route="services">Branding</a><a href="#services" data-route="services">Graphics</a><a href="#services" data-route="services">Presentations</a></div><a class="drawer-link" href="#services" data-route="services"><svg class="icon sm"><use href="#megaphone"/></svg>Marketing</a><div class="drawer-sub"><a href="#services" data-route="services">SEO</a><a href="#services" data-route="services">Ads</a><a href="#services" data-route="services">Social</a><a href="#services" data-route="services">Content</a></div><a class="drawer-link" href="#services" data-route="services"><svg class="icon sm"><use href="#pen"/></svg>Writing & Media</a><div class="drawer-sub"><a href="#services" data-route="services">Copywriting</a><a href="#services" data-route="services">Video</a><a href="#services" data-route="services">Editing</a><a href="#services" data-route="services">Voice</a></div></div><div class="drawer-section"><div class="drawer-title">Company</div><a class="drawer-link" href="#how" data-route="how"><svg class="icon sm"><use href="#zap"/></svg>How it works</a><a class="drawer-link" href="#portfolio" data-route="portfolio"><svg class="icon sm"><use href="#star"/></svg>Portfolio</a><a class="drawer-link" href="#blog" data-route="blog"><svg class="icon sm"><use href="#book"/></svg>Blog</a><a class="drawer-link" href="#contact" data-route="contact"><svg class="icon sm"><use href="#mail"/></svg>Contact</a></div><div class="drawer-section"><div class="drawer-title">Account</div><a class="drawer-link" href="#signin" data-route="signin"><svg class="icon sm"><use href="#login"/></svg>Sign in</a><a class="drawer-link" href="#signup" data-route="signup"><svg class="icon sm"><use href="#plususer"/></svg>Join free</a></div></aside>
 <div class="overlay-search" id="searchOverlay"><div class="search-panel"><div class="search"><div class="search-icon"><svg class="icon"><use href="#search"/></svg></div><input id="globalSearch" type="search" placeholder="Search services, skills, pages..." autocomplete="off"><button class="icon-btn" id="searchClose" aria-label="Close"><svg class="icon"><use href="#x"/></svg></button></div><div class="results" id="results"><a class="result" href="#services" data-route="services"><span>Web Development</span><svg class="icon sm"><use href="#arrow"/></svg></a><a class="result" href="#services" data-route="services"><span>UI / UX Design</span><svg class="icon sm"><use href="#arrow"/></svg></a><a class="result" href="#services" data-route="services"><span>Digital Marketing</span><svg class="icon sm"><use href="#arrow"/></svg></a><a class="result" href="#work" data-route="work"><span>Find Work</span><svg class="icon sm"><use href="#arrow"/></svg></a><a class="result" href="#pricing" data-route="pricing"><span>Pricing</span><svg class="icon sm"><use href="#arrow"/></svg></a></div></div></div>
